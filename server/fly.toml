@@ -1,22 +1,22 @@
-# fly.toml app configuration file generated for rms-server on 2024-01-18T01:46:59+06:00
+# fly.toml app configuration file generated for rms-server-silent-silence-5926 on 2024-02-25T19:38:27+06:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "rms-server"
-primary_region = "waw"
+app = 'rms-server'
+primary_region = 'waw'
 
 [build]
 
 [http_service]
   internal_port = 3000
   force_https = true
-  auto_stop_machines = true
-  auto_start_machines = true
-  min_machines_running = 0
-  processes = ["app"]
+  auto_stop_machines = false
+  auto_start_machines = false
+  min_machines_running = 1
+  processes = ['app']
 
 [[vm]]
-  cpu_kind = "shared"
+  cpu_kind = 'shared'
   cpus = 1
   memory_mb = 256
